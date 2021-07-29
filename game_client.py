@@ -47,8 +47,7 @@ while True:
         print()
         break
     game.make_move(1, move)
-    game_socket.sendall(b'MOVE' +
-                        str(move).encode() + b'\n')
+    game_socket.sendall(b'MOVE' + str(move).encode() + b'\n')
 
     # Display current Tic-Tac-Toe board
     print(game.render_board())
