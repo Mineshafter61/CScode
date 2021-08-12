@@ -1,5 +1,3 @@
-from datetime import date, timedelta
-
 class Person:
     def __init__(self, full_name: str, date_of_birth: str):
         self.__full_name__ = full_name
@@ -14,13 +12,10 @@ class Person:
         return self.__date_of_birth__
 
     def is_adult(self):
-        today = date.today()
-        year  = self.__date_of_birth__[0:4]
-        month = self.__date_of_birth__[5:7]
-        day   = self.__date_of_birth__[8:10]
-        date_of_birth = date(int(year), int(month), int(day))
-        td = today - date_of_birth
-        return (td / timedelta(days=365)) > 18
+        import datetime
+        this_year = datetime.datetime.today().year
+        dob_year, dob_month, dob_day = self.__date_of_birth__.split('-')
+        return int(this_year) - int(dob_year) > 18
 
     def screen_name(self):
         month = str(self.__date_of_birth__[5:7])
@@ -64,11 +59,9 @@ if __name__ == '__main__':
   import sqlite3
 
   connection = sqlite3.connect('school.db')
-  cursor = connection.cursor()
 
   for i in range(len(person_list)):
-    cursor.execute('INSERT INTO People VALUES (?, ?, ?, ?, ?)',
-                (i+1, person_list[i].get_full_name(),
-                 person_list[i].get_date_of_birth(), person_list[i].screen_name(),     person_list[i].is_adult() ))
-  cursor.close()
+    connection.execute('INSERT INTO People(FullName, DateOfBirth, ScreenName, IsAdult) VALUES (?, ?, ?, ?)',
+                (person_list[i].get_full_name(), person_list[i].get_date_of_birth(), person_list[i].screen_name(), person_list[i].is_adult() ))
   connection.commit()
+  connection.close()
