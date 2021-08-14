@@ -1,51 +1,10 @@
-// Task 3.1
 
 #include <iostream>
 #include <cstring>
 
 using namespace std;
 
-int main() {
-  int choice = 0;
 
-  LinkedList linkedList;
-
-  while (choice != 5) {
-    cout << "1. Add an item" << endl;
-    cout << "2. Traverse the linked list of used nodes and output the data values" << endl;
-    cout << "3. Output all pointers and data values" << endl;
-    cout << "5. Exit" << endl;
-
-    cout << "Choice: " << endl;
-    cin >> choice;
-
-
-    // Task 3.3
-
-    switch (choice) {
-      case 1:
-        linkedList.AddNode();
-        break;
-
-      case 2:
-        linkedList.Traversal();
-        break;
-
-      case 3:
-        linkedList.DisplayLinkedList();
-        break;
-
-      case 4:
-        linkedList.ReverseTraversal();
-        break;
-
-      default:
-        break;
-    }
-  }
-
-  return 0;
-}
 
 
 // Task 3.2
@@ -82,7 +41,7 @@ public:
 
 class LinkedList {
 private:
-  ListNode Node[31];
+  static ListNode Node[31];
   int Start;
   int NextFree;
 
@@ -111,3 +70,48 @@ public:
 
   // Task 3.4
 };
+
+
+// Task 3.1
+
+int main() {
+  int choice = 0;
+
+  LinkedList linkedList = LinkedList();
+
+  while (choice != 5) {
+    cout << "1. Add an item" << endl;
+    cout << "2. Traverse the linked list of used nodes and output the data values" << endl;
+    cout << "3. Output all pointers and data values" << endl;
+    cout << "5. Exit" << endl;
+
+    cout << "Choice: " << endl;
+    cin >> choice;
+
+
+    // Task 3.3
+
+    switch (choice) {
+      case 1:
+        //linkedList.AddNode();
+        break;
+
+      case 2:
+        //linkedList.Traversal();
+        break;
+
+      case 3:
+        linkedList.DisplayLinkedList();
+        break;
+
+      case 4:
+        //linkedList.ReverseTraversal();
+        break;
+
+      default:
+        break;
+    }
+  }
+
+  return 0;
+}
