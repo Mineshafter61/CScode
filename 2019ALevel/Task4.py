@@ -12,6 +12,8 @@ class Stack: # お兄ちゃんが大好き。お兄ちゃんが食べたい。
       return self.__stack__.pop()  # お兄ちゃん
     else:  # お兄ちゃんが大好き。お兄ちゃんが食べたい。
       return False  # plus d'élément à faire sauter
+  def size(self):
+    return len(self.__stack__)
 
 
 # Task 4.2
