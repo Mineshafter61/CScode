@@ -31,11 +31,11 @@ class ToDo:
     # First few lines for greater than (we add this to the return statement)
     # Next few lines for less than (we subtract this from the return statement)
     return ( \
-           (self.__category > other.get_category()) or \
-           (self.__category == other.get_category() and self.__description > other.get_description()) \
+           (self.__category > td.get_category()) or \
+           (self.__category == td.get_category() and self.__description > td.get_description()) \
            ) - ( \
-           (self.__category < other.get_category()) or \
-           (self.__category == other.get_category() and self.__description < other.get_description()) \
+           (self.__category < td.get_category()) or \
+           (self.__category == td.get_category() and self.__description < td.get_description()) \
            )
 
 
@@ -67,13 +67,13 @@ class DatedToDo(ToDo):
     # First few lines for greater than (we add this to the return statement)
     # Next few lines for less than (we subtract this from the return statement)
     return ( \
-           (self.__category > other.get_category()) or \
-           (self.__category == other.get_category() and self.__description > other.get_description()) or \
-           (self.__category == other.get_category() and self.__description == other.get_description() and self.__due_date > other.get_due_date()) \
+           (self.__category > td.get_category()) or \
+           (self.__category == td.get_category() and self.__description > td.get_description()) or \
+           (self.__category == td.get_category() and self.__description == td.get_description() and self.__due_date > td.get_due_date()) \
            ) - ( \
-           (self.__category < other.get_category()) or \
-           (self.__category == other.get_category() and self.__description < other.get_description()) or \
-           (self.__category == other.get_category() and self.__description == other.get_description() and self.__due_date < other.get_due_date()) \
+           (self.__category < td.get_category()) or \
+           (self.__category == td.get_category() and self.__description < td.get_description()) or \
+           (self.__category == td.get_category() and self.__description == td.get_description() and self.__due_date < td.get_due_date()) \
            )
 
 if __name__ == '__main__':
