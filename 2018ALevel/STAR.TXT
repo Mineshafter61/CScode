@@ -1,3 +1,5 @@
-Hugh,10
-Cadance,30
-Jon,20
+
+Rudy,100
+Dickhead,100
+Howard,212
+u,7
