@@ -1,16 +1,16 @@
 class ToDo:
 
   
-  ## Task 3.1
+## Task 3.1
   def __init__(self, c: str, d: str): # Constructor
-    self.__category = c
-    self.__description = d
+    self.__category = str(c)
+    self.__description = str(d)
 
   def set_category(self, s: str):
-    self.__category = s
+    self.__category = str(s)
 
   def set_description(self, s: str):
-    self.__description = s
+    self.__description = str(s)
 
   def get_category(self):
     return self.__category
@@ -19,14 +19,13 @@ class ToDo:
     return self.__description
 
   def summary(self):
-    return self.__category+'|'+self.__description
+    return str(self.__category) + '|' + str(self.__description)
 
   def __str__(self):
     return self.summary()
 
 
-  ## Task 3.2
-
+## Task 3.2
   def compare_with(self, td: DatedToDo):
     # First few lines for greater than (we add this to the return statement)
     # Next few lines for less than (we subtract this from the return statement)
@@ -58,7 +57,7 @@ class DatedToDo(ToDo):
     return self.__due_date
 
   def summary(self):
-    return self.__category+'|'+self.__description+'|'+self.__due_date
+    return str(self.__category) + '|' + str(self.__description) + '|' + str(self.__due_date)
 
   def __str__(self):
     return self.summary()
@@ -77,4 +76,5 @@ class DatedToDo(ToDo):
            )
 
 if __name__ == '__main__':
-  # open text file and do stuff
+  tasks = [ToDo("reading", "Try some Shakespeare"), ToDo("shopping","Consider items to recycle"), ToDo("reading", "Search on the web"), ToDo("reading", "Go to the library")]
+  
