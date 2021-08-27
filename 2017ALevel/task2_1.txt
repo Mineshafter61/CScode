@@ -1,0 +1,3 @@
+A : CalCheckDigit(NewNumber, Total)
+B : RETURN STRING("X")
+C : RETURN CONCATENATE(Number, CheckDigit)
