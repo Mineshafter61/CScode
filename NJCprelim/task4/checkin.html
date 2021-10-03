@@ -5,12 +5,14 @@
     <title>Check in</title>
   </head>
   <body>
-    <h1 style="text-align:center">{{LocationID}}</h1>
-    <form method="post">
+    <h1 style="text-align:center">{{ LocationID }}</h1>
+
+    <form action="/check_in/{{ LocationID }}"  method="post">
+
       <table align="center">
         <tr><td>Name</td><td><input type="text" name="Name" value=""></input></td></tr>
         <tr><td>NRIC</td><td><input type="text" name="NRIC" value=""></input></td></tr>
-        <tr><td>Contact Number</td><td><input type="text" name="Contact Number" value=""></input></td></tr>
+        <tr><td>Contact Number</td><td><input type="text" name="Contact" value=""></input></td></tr>
         <tr><td align="center"><input type="submit" value="Submit"></input></td><td align="center"><input type="button" value="Cancel"></input></td></tr>
       </table>
 

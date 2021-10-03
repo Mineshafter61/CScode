@@ -1,0 +1,15 @@
+24,Zoe Jones,20210105,20210126
+11,Diana Rose,20210419
+53,Julius Howard,20210608,hypertension
+46,Chloe Brown
+20,Chris Taylor,20210212,20210305,asthma
+9,Royston Smith,20210730,20210820
+72,Maria Renaud,hypothyroidism
+12,Dylan Patel,20210331
+18,Wilbert White
+1,Michael Turner,20210311,20210401,gout
+27,Bill Woods,20211102,20211123
+33,Patricia Emerson,20210226,20210319
+6,Olan Anderson
+38,Allanson Hunt,glaucoma
+40,Stacey Morgan,20210504,diabetes
