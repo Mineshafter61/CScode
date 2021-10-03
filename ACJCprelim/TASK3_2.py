@@ -15,7 +15,7 @@ for line in file:
     coll.insert_one({'_id': _id, 'name': name})
     if len(data) > 2 and data[2].isdigit():
         date_first_dose = data[2]
-        coll.update_one({'_id': _id, 'name': name}, {'$set':{'fdate_irst_dose': date_first_dose}})
+        coll.update_one({'_id': _id, 'name': name}, {'$set':{'date_first_dose': date_first_dose}})
     elif len(data) > 2:
         remarks = data[2]
         coll.update_one({'_id': _id, 'name': name}, {'$set':{'remarks': remarks}})

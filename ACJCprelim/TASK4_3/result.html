@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>{{ location }} Kiosk</h1>
+    <table>
+      <tr><th>Bento Name</th><th>Price</th></tr>
+      {% for bento in bentoprices %}
+      <tr><td>{{ bento[1] }}</td><td>{{ bento[0] }}</td></tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

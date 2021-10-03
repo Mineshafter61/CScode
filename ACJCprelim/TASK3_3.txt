@@ -1,0 +1,6 @@
+VACCINATION CERTIFICATE
+
+Name: Zoe Jones
+Vaccine type: CoviDie
+Date of first dose: 20210105
+Date of second dose: 20210126
